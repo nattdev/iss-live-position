@@ -37,8 +37,8 @@ body {
 	flex-grow: 1;
 }
 
-.ubication-wrapper p:first-child{
-	padding: 4px;
+.date{
+	padding: 12px 4px;
 }
 
 .ubication-wrapper p {
