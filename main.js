@@ -11,7 +11,7 @@ let dateElement = document.querySelector("#date");
 /** Fetch API **/
 
 // Definir la URL de la API
-const apiUrl = 'http://api.open-notify.org/iss-now.json';
+const apiUrl = 'https://api.wheretheiss.at/v1/satellites/25544';
 
 // Hacer una solicitud GET utilizando la Fetch API
 fetch(apiUrl)
@@ -26,8 +26,8 @@ fetch(apiUrl)
   .then(data => {
     // Manipular los datos obtenidos de la API
     console.log(data);
-		latitude = parseFloat(data["iss_position"]["latitude"]);
-		longitude = parseFloat(data["iss_position"]["longitude"]);
+		latitude = parseFloat(data["latitude"]);
+		longitude = parseFloat(data["longitude"]);
 		timestamp = data["timestamp"];
     // Aquí puedes realizar acciones adicionales con los datos
 		latitudeElement.innerText = latitude;
