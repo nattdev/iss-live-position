@@ -27,3 +27,30 @@ body {
 #map { 
 	height: 100%; 
 }
+
+.description {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	flex-grow: 1;
+}
+
+.ubication-wrapper p:first-child{
+	padding: 4px;
+}
+
+.ubication-wrapper p {
+	font-weight: bold;
+}
+
+.ubication-wrapper span {
+	font-weight: normal;
+}
+
+.position {
+	background: #2e2e2e;
+	color: #ffffff;
+	padding: 8px;
+}
