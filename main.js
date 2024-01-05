@@ -10,6 +10,7 @@ let latitude;
 let longitude;
 
 /** Fetch API **/
+
 // Definir la URL de la API
 const apiUrl = 'http://api.open-notify.org/iss-now.json';
 
@@ -26,16 +27,13 @@ fetch(apiUrl)
   .then(data => {
     // Manipular los datos obtenidos de la API
     console.log(data);
-		console.log(data["iss_position"]["latitude"]);	
-		console.log(data["iss_position"]["longitude"]);
-		latitude =  data["iss_position"]["latitude"];
-		longitude = data["iss_position"]["longitude"];
+		latitude = parseFloat(data["iss_position"]["latitude"]);
+		longitude = parseFloat(data["iss_position"]["longitude"]);
     // Aquí puedes realizar acciones adicionales con los datos
+		var marker = L.marker([latitude, longitude]).addTo(map);
   })
   .catch(error => {
     // Manejar errores de red o errores en la API
     console.error('Error al obtener datos:', error);
   });
 
-
-var marker = L.marker([51.5, -0.09]).addTo(map);
