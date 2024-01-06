@@ -15,7 +15,6 @@ body {
 }
 
 .description {
-	height: 20%;
 	text-align: center;
 }
 
@@ -24,20 +23,22 @@ body {
 	width: 100%;
 }
 
-#map { 
-	height: 100%; 
+#map {
+	height: 100%;
 }
 
 .description {
 	display: flex;
 	flex-direction: column;
+
 }
 
 .title {
 	flex-grow: 1;
+	padding: 12px;
 }
 
-.date{
+.date {
 	padding: 12px 4px;
 }
 
@@ -52,5 +53,5 @@ body {
 .position {
 	background: #2e2e2e;
 	color: #ffffff;
-	padding: 8px;
+	padding: 0.8em;
 }
