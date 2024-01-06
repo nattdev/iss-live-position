@@ -8,6 +8,17 @@ let latitudeElement = document.querySelector("#latitude");
 let longitudeElement = document.querySelector("#longitude");
 let dateElement = document.querySelector("#date");
 
+let issIcon = L.icon({
+    iconUrl: './assets/iss_icon.png',
+    shadowUrl: './assets/iss_icon_shadow.png',
+
+    iconSize:     [100, 95], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
 /** Fetch API **/
 
 // Definir la URL de la API
@@ -39,7 +50,7 @@ fetch(apiUrl)
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-		var marker = L.marker([latitude, longitude]).addTo(map);
+		var marker = L.marker([latitude, longitude], {icon: issIcon}).addTo(map);
 
 	// Crear un objeto Date con el timestamp (multiplicando por 1000 para convertir a milisegundos)
 	const date = new Date(timestamp * 1000);
