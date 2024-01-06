@@ -12,10 +12,10 @@ let issIcon = L.icon({
     iconUrl: './assets/iss_icon.png',
     shadowUrl: './assets/iss_icon_shadow.png',
 
-    iconSize:     [100, 95], // size of the icon
-    shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    shadowAnchor: [4, 62],  // the same for the shadow
+    iconSize:     [90, 85], // size of the icon
+    shadowSize:   [40, 54], // size of the shadow
+    iconAnchor:   [20, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [-40, 82],  // the same for the shadow
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
