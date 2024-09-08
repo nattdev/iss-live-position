@@ -9,8 +9,8 @@ let longitudeElement = document.querySelector("#longitude");
 let dateElement = document.querySelector("#date");
 
 let issIcon = L.icon({
-    iconUrl: './assets/iss_icon.png',
-    shadowUrl: './assets/iss_icon_shadow.png',
+    iconUrl: './assets/icon_iss.png',
+    shadowUrl: '#',
 
     iconSize:     [90, 85], // size of the icon
     shadowSize:   [40, 54], // size of the shadow
